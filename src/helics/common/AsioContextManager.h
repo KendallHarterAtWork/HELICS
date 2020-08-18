@@ -50,7 +50,7 @@ class AsioContextManager: public std::enable_shared_from_this<AsioContextManager
     std::unique_ptr<asio::io_context> ictx;  //!< pointer to the actual context
     std::unique_ptr<asio::io_context::work>
         nullwork;  //!< pointer to an object used to keep a context running
-    bool leakOnDelete = false;  //!< this is done to prevent some warning messages for use in DLL's
+    bool leakOnDelete = true;  //!< this is done to prevent some warning messages for use in DLL's
     std::atomic<loop_mode> running{loop_mode::stopped};  //!< flag indicating the loop is running
     std::mutex runningLoopLock;  //!< lock protecting the nullwork object and the return future
     std::atomic<bool> terminateLoop{false};  //!< flag indicating that the loop should terminate
