@@ -42,8 +42,8 @@ SPDX-License-Identifier: BSD-3-Clause
 class AsioContextManager: public std::enable_shared_from_this<AsioContextManager> {
   private:
     enum class loop_mode : int { stopped = 0, starting = 1, running = 2 };
-    static std::map<std::string, std::shared_ptr<AsioContextManager>>
-        contexts;  //!< container for pointers to all the available contexts
+    // static std::map<std::string, std::shared_ptr<AsioContextManager>>
+    //     contexts;  //!< container for pointers to all the available contexts
     std::atomic<int> runCounter{
         0};  //!< counter for the number of times the runContextLoop has been called
     std::string name;  //!< context name
