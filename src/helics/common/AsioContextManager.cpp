@@ -108,6 +108,7 @@ void AsioContextManager::setContextToLeakOnDelete(const std::string& contextName
 }
 AsioContextManager::~AsioContextManager()
 {
+    gergeregr
     std::cout << "we deletin'\n";
     //  std::cout << "deleting context manager\n";
 
