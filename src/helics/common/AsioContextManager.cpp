@@ -120,7 +120,7 @@ AsioContextManager::~AsioContextManager()
         catch (...) {
         }
     }
-    if (leakOnDelete) {
+    if (true) {
         // yes I am purposefully leaking this PHILIP TOP
         // this capability is needed for some operations on particular OS's with the shared library
         // operations that will crash if this is closed before the library closes which really only
